@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN" >
+<head>
+    <meta charset="utf-8">
+    <link href="html/images/logo.ico" rel="icon" type="image/x-ico">
+    <link href="css/index.css" rel="stylesheet" type="text/css" >
+    <meta name="viewport" content="width=device-width， initial-scale=1" />
+    <script src="js/jQuery.js"></script>
+</head>
+<body>
+    <title>^_-</title>
+    <h1 id="head" >(^)0(^)b</h1>
+<!-- 图片与JavaScript初尝试 -->
+    <p id="ok"><b>图片</b></p>
+    <img id="pic" src="html/images/aquashion.jpg" alt="盐水贴贴" width="259" height="262" />
+    <br>
+    <button type="button" onclick="f()">てぇてぇ！</button>
+    <button type="button" onclick="f2()">贴贴！</button>
+    <script type="text/javascript" src="js/twobutton.js"></script>
+<!-- 表单与PHP后端交互 强大的JavaScript框架jQuery与(异步)AJAX技术 -->
+    <p><b>表单</b></p>
+    <form id="fm" action="php/test.php" method="POST">
+        <div>
+            <textarea name="text" id="text" cols="32" rows="3" maxlength="10" placeholder="请输入……" ></textarea>
+            <br>
+            <button type="submit">确认(php)</button>
+            <button type="button" onclick="ajax()">确认(php+jQuery+ajax)</button>
+        </div>
+        <p id="post" >------</p>
+    </form>
+    <script type="text/javascript" src="js/ajax.js"></script>
+<!-- 探索jQuery -->
+    <br>
+    <button id="show" type="button" >显示</button>
+    <a id="f" href="html/F.html">傅里叶级数演示</a>
+    <script type="text/javascript " >
+    $(document).ready(function(){
+        $("#f").hide()
+        $("#show").click(function(){
+            $("#f").fadeToggle(500)
+            //500ms渐变
+        });
+    });
+    </script>
+<!-- 表格 -->
+    <br>
+    <p id="table" ><u><strong>表格</strong></u></p>
+    <table id="ごじゅうおん" border="1">
+        <tr><th>行与段</th><th>あ段</th><th>い段</th><th>う段</th><th>え段</th><th>お段</th></tr>
+        <tr><th>か行</th><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td></tr>
+        <tr><th>さ行</th><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td></tr>
+        <tr><th>た行</th><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td></tr>
+        <tr><th>な行</th><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td></tr>
+        <tr><th>は行</th><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td></tr>
+        <tr><th>ま行</th><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td></tr>
+        <tr><th>や行</th><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td></tr>
+        <tr><th>ら行</th><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td></tr>
+        <tr><th>わ行</th><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td></tr>
+    </table>
+    <script>
+        $("#ごじゅうおん").hide()
+        $("#table").click(
+            function () {
+                $("#ごじゅうおん").fadeToggle()
+            }
+        )
+    </script>
+<!-- 列表 -->
+    <br>
+    <p>无序表</p>
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ul>
+    <p>有序表</p>
+    <ol>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+    </ol>
+<!-- 表单 -->
+    <br>
+    是<input type="radio" name="单选" id="">不是<input type="radio" name="单选" id=""><br>
+    是<input type="checkbox" name="多选" id="">不是<input type="checkbox" name="多选" id="">
+<!--探索php  -->
+    <br>
+    <p><b>PHP</b></p>
+    <a href="html/QQ.html">QQ</a>
+<!-- 返回顶部 -->
+    <div>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </div>
+    <a href="#head"><button>返回顶部</button></a>
+
+</body>
+</html>
