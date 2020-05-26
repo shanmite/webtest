@@ -11,10 +11,10 @@ $(document).ready(function(){
         function () {
             if (document.getElementById("korone").attributes["src"].value=="html/images/korone0.png") {
                 document.getElementById("korone").src="html/images/korone1.png"
-                document.getElementById("button1").title="あ~!↗あ~!↗あ~!↗"
+                document.getElementById("korone").title="あ~!↗あ~!↗あ~!↗"
             } else {
                 document.getElementById("korone").src="html/images/korone0.png"
-                document.getElementById("button1").title="ほら見てほらよ"
+                document.getElementById("korone").title="ほら見てほらよ"
             }
         }
     )
