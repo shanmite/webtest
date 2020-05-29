@@ -2,49 +2,87 @@
     margin: 0;
     padding: 0;
 }
+body {
+    background-image: url(../html/images/background.png);
+    background-size: 358px;
+    background-attachment: fixed;
+    font-size: 16px;
+    /* background-repeat: no-repeat; */
+}
 .header {
-    height: 50px;
+    width: auto;
+    height: 56px;
     box-shadow: 0px 0px 5px 0px black;
     background-color: rgba(135, 207, 235, 0.123);
 }
 .nav {
-    height: 50px;
-    vertical-align: middle;
+    display: inline-block;
+    height: 36px;
+    padding: 10px 0 ;
+    width: 434px;
+    /* vertical-align: middle; */
 }
 .nav :first-child {
     display: inline-block;
-    height: 40px;
-    width: 40px;
+    height: 36px;
+    width: 36px;
     padding-left: 0px;
-    margin: 5px 0 5px 20px;
+    margin: 0px 0 0px 20px;
     background-image: url(../html/images/home.png);
     background-repeat: no-repeat ;
+    /* 不平铺  */
     background-position: center;
-    background-size: 70px,70px ;
+    background-size: 55px,55px ;
 }
 .nav :first-child:hover {
-    background-size: 75px,75px ;
-}
-.nav a {
-    text-align: center;
-    vertical-align: middle;
-    display: inline-block;
-    margin-left: 15px;
-    width: 50px;
+    background-size: 66px,66px ;
 }
 a {
     color:black;
     text-decoration: none;
 }
+.nav a {
+    text-align: center;
+    line-height: 36px;
+    vertical-align: middle;
+    /* 把此元素放置在父元素的中部 */
+    display: inline-block;
+    /* margin: 0 15px; */
+    height: 36px;
+    width: 120px;
+}
 .header a:hover {
-    font-size: 17px;
+    font-size: 22px;
     color: skyblue;
 }
-.area_2 form {
-    height: 50px;
-    text-align: center;
-    line-height: 50px;
-    background-color: rgba(0, 153, 255, 0.322);
+
+.search {
+    display: inline-block;
+    vertical-align: middle;
+    height: 56px;
+    /* text-align: center; */
+    line-height: 56px;
+}
+.search form {
+    height: 56px;
+}
+.search input {
+    border: 1px solid rgba(0, 0, 0, 0.178);
+    padding: 8px 0 8px 15px;
+    width: 180px;
+    outline: none;
+    background-color: rgba(0, 0, 0, 0.075);
+}
+.search button {
+    border: 0;
+    padding: 7px 5px ;
+    background-color: rgba(0, 0, 0, 0.164);
+    cursor: pointer;
+    outline: none;
+}
+.search button:hover {
+    color: rgb(0, 174, 255);
+    translate:  easy .5s ;
 }
 /*
 .area_2 {
