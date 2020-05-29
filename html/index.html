@@ -46,8 +46,8 @@
     });
     </script>
 <!-- 表格 -->
-    <br>
-    <p id="table" ><u><strong>表格</strong></u></p>
+    <br><br>
+    <div class="table" ><strong>表格</strong></div>
     <table id="ごじゅうおん" border="1">
         <tr><th>行与段</th><th>あ段</th><th>い段</th><th>う段</th><th>え段</th><th>お段</th></tr>
         <tr><th>か行</th><td>.</td><td>.</td><td>.</td><td>.</td><td>.</td></tr>
@@ -62,7 +62,7 @@
     </table>
     <script>
         $("#ごじゅうおん").hide()
-        $("#table").click(
+        $(".table").click(
             function () {
                 $("#ごじゅうおん").fadeToggle()
             }

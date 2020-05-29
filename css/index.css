@@ -10,7 +10,19 @@ p {
 #post {
     color: forestgreen;
 }
-/* button
-{
-    cursor:pointer
+.table {
+    cursor: pointer;
+    width: 2em;
+}
+/* .table:link {
+    
+}
+.table:visited {
+
 } */
+.table:hover {
+    color: royalblue;
+}
+.table:active {
+    color: blue;
+}

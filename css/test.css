@@ -1,0 +1,39 @@
+body {
+    background-color: wheat;
+    margin: 0px;
+}
+.black {
+    background-color:black;
+}
+.white {
+    background-color:white;
+}
+/* 可变box */
+.box {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    transition: all 0.5s ease .0s;
+    
+}
+/* 伪类 对鼠标的反应 */
+.box:hover {
+    width: 50px;
+    height: 150px;
+    text-align: center;
+    /* transform: scale(1,1); */
+}
+.left {
+    float: left;
+}
+.right {
+    float: right;
+    /* margin-left: 100px; */
+}
+/* .mbox {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+} */
+
