@@ -18,8 +18,8 @@
         </div>
         <div class="search-box">
             <div class="search">
-                <form action="#" method="GET">
-                    <input placeholder="今天想了解点什么" type="text">
+                <form >
+                    <input id="input" placeholder="今天想了解点什么" type="text">
                     <div class="search-btn">
                         <button id="btn" type="button">搜索</button>
                     </div>
@@ -27,7 +27,7 @@
             </div>
             <script>
                 $("#btn").click(function () {
-                    alert("此功能还未完成");
+                    window.location.href="https://cn.bing.com/search" + "?q=" + $("input").val();
                 });
             </script>
         </div>
