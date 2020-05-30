@@ -12,6 +12,10 @@ function IsPC() {
     }
     return flag;
 }
+if (IsPC()) {
+    document.getElementById("view").content="";
+    //win
+}
 var u = navigator.userAgent;
     if (u.indexOf('Android') > -1 || u.indexOf('Linux') > -1) {
         document.getElementById("css").href= "";
@@ -21,7 +25,7 @@ var u = navigator.userAgent;
     } else if (u.indexOf('Windows Phone') > -1) {
         //winphone手机
     }
-    function isWeiXin(){
+function isWeiXin(){
         var ua = navigator.userAgent.toLowerCase();
         if(ua.indexOf('micromessenger') != -1) {
             return true;
@@ -29,3 +33,6 @@ var u = navigator.userAgent;
             return false;
         }
     }
+if (isWeiXin()) {
+    //微信
+}

@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta id="view" name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="../js/jQuery.js"></script>
     <link id="css" rel="stylesheet" href="../css/demo.css">
     <script src="../js/ua.js"></script>
@@ -16,19 +16,22 @@
             <a href="https://github.com/shanmite/webtest">Github项目</a>
             <a href="">待定</a>
         </div>
-        <div class="search">
-            <form action="#" method="GET">
-                <input placeholder="今天想了解点什么" type="text">
-                <button id="btn" type="button">搜索</button>
-            </form>
+        <div class="search-box">
+            <div class="search">
+                <form action="#" method="GET">
+                    <input placeholder="今天想了解点什么" type="text">
+                    <div class="search-btn">
+                        <button id="btn" type="button">搜索</button>
+                    </div>
+                </form>
+            </div>
             <script>
                 $("#btn").click(function () {
                     alert("此功能还未完成");
                 });
             </script>
         </div>
-        <div class="area_3">
-        </div>
+        
     </div>
     <br>
     <br>
