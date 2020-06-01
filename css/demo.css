@@ -4,102 +4,79 @@
 }
 body {
     background-image: url(../html/images/background.png);
-    background-size: 358px;
-    background-attachment: fixed;
+    background-size: 250px;
     font-size: 16px;
-    /* background-repeat: no-repeat; */
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #000;
 }
 .header {
-    width: auto;
     height: 56px;
-    box-shadow: 0px 0px 5px 0px black;
-    background-color: rgba(135, 207, 235, 0.123);
+    background-color: #fff;
+    box-shadow: 0px 0px 15px -4px rgba(0, 0, 0, 0.9);
 }
-.nav {
-    display: inline-block;
-    height: 36px;
-    padding: 10px 0 ;
-    width: 434px;
-    /* vertical-align: middle; */
+.nav-link {
+    float: left;
 }
-.nav :first-child {
-    display: inline-block;
-    height: 36px;
-    width: 36px;
+.nav-link ul li {
+    float: left;
+    margin-left: 45px;
+    line-height: 56px;
+}
+.nav-link ul .home {
+    width: 40px;
+    height: 40px;
+    margin: 8px 0 8px 35px;
     padding-left: 0px;
-    margin: 0px 0 0px 20px;
     background-image: url(../html/images/home.png);
     background-repeat: no-repeat ;
-    /* 不平铺  */
     background-position: center;
     background-size: 55px,55px ;
 }
-.nav :first-child:hover {
+.nav-link ul  .home:hover {
     background-size: 66px,66px ;
     transition: all .5s ease 0s ;
 }
-a {
-    color:black;
-    text-decoration: none;
+.nav-link ul  .home a {
+    display: block;
+    width: 40px;
+    height: 40px;
 }
-.nav a {
-    text-align: center;
-    line-height: 36px;
-    vertical-align: middle;
-    /* 把此元素放置在父元素的中部 */
-    display: inline-block;
-    /* margin: 0 15px; */
-    height: 36px;
-    width: 120px;
-}
-.header a:hover {
-    font-size: 22px;
+.nav-link a:hover {
     color: skyblue;
-    transition: all .5s ease 0s ;
+    transition: all 0.3s ease 0s ;
 }
-
-.search-box,
-.search,
-.search form {
-    display: inline-block;
-    vertical-align: middle;
-    /* height: 56px; */
-    /* text-align: center; */
-    /* line-height: 56px; */
+.nav-search-box {
+    float: left;
 }
-.search-box {
-    position: relative;
-    left: 0px;
-    /* 左右移动 */
+.nav-search-box .search {
+    float: left;
+    margin: 12px 25px 12px 25px ;
 }
-.search {
-    padding: 0 10px;
-}
-.search input {
-    border: 1px solid rgba(0, 0, 0, 0.178);
-    padding: 8px 0 8px 15px;
+.nav-search-box .search input {
+    float: left;
     width: 180px;
+    height: 31px;
+    border: 1px solid rgba(0, 0, 0, 0.178);
+    padding: 0 0 0 15px;
     outline: none;
     background-color: rgba(0, 0, 0, 0.075);
 }
-.search-btn {
-    border: 0;
-    padding: 0;
-    background-color: rgba(0, 0, 0, 0.164);
-    cursor: pointer;
-    outline: none;
-    display: inline-block;
-    vertical-align: middle;
-    position: relative;
-    left: -6px;
+.nav-search-box .search-btn {
+    float: left;
 }
-.search-btn button {
-    padding: 7px;
+.nav-search-box .search button {
     border: 1px solid rgba(0, 0, 0, 0.288);
     border-left: 0;
-
+    padding: 7px;
+    outline: none;
+    cursor: pointer;
 }
-.search-btn button:hover {
+.nav-search-box .search button:hover {
     color: rgb(0, 174, 255);
     transition: all .2s ease 0s ;
 }

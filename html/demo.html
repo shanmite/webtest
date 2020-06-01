@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
     <meta charset="UTF-8">
     <meta id="view" name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <script src="../js/ua.js"></script>
     <title>测试</title>
 </head>
+
 <body>
     <div class="header">
         <div class="nav">
@@ -20,18 +22,25 @@
             <div class="search">
                 <form >
                     <input id="input" placeholder="今天想了解点什么" type="text">
+                    <input type="text" style="display:none" />
+                    <!-- 只有一个input时回车自动提交表单 -->
                     <div class="search-btn">
                         <button id="btn" type="button">搜索</button>
                     </div>
                 </form>
             </div>
             <script>
+                $("#input").keydown(function (event) {
+                    if (event.keyCode == 13) {
+                        window.location.href = "https://cn.bing.com/search" + "?q=" + $("#input").val();
+                    };
+                });
                 $("#btn").click(function () {
-                    window.location.href="https://cn.bing.com/search" + "?q=" + $("input").val();
+                    window.location.href = "https://cn.bing.com/search" + "?q=" + $("#input").val();
                 });
             </script>
         </div>
-        
+
     </div>
     <br>
     <br>
@@ -84,4 +93,5 @@
     <br>
     <br>
 </body>
+
 </html>
