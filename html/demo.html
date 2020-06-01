@@ -12,18 +12,27 @@
 
 <body>
     <div class="header">
-        <div class="nav">
-            <a href="http://localhost:81"></a>
-            <a href="https://bilibili.com">Bilibili首页</a>
-            <a href="https://github.com/shanmite/webtest">Github项目</a>
-            <a href="">待定</a>
+        <div class="nav-link">
+            <ul>
+                <li class="home">
+                    <a style="color: black;" href="http://localhost:81"></a>
+                </li>
+                <li>
+                    <a href="https://bilibili.com">Bilibili首页</a>
+                </li>
+                <li>
+                    <a href="https://live.bilibili.com/13731998">直播间挂机</a>
+                </li>
+                <li>
+                    <a href="https://github.com/shanmite/webtest">Github项目</a>
+                </li>
+            </ul>
         </div>
-        <div class="search-box">
+        <div class="nav-search-box">
             <div class="search">
                 <form >
                     <input id="input" placeholder="今天想了解点什么" type="text">
                     <input type="text" style="display:none" />
-                    <!-- 只有一个input时回车自动提交表单 -->
                     <div class="search-btn">
                         <button id="btn" type="button">搜索</button>
                     </div>
@@ -40,7 +49,37 @@
                 });
             </script>
         </div>
-
+        <div class="nav-user-box nav-link">
+            <div>
+                <a href="">待定</a>
+            </div>
+            <div>
+                <a href="">待定</a>
+            </div>
+            <div>
+                <a href="">待定</a>
+            </div>
+            <div>
+                <a href="">待定</a>
+            </div>
+            <div>
+                <a href="">待定</a>
+            </div>
+        </div>
+        <div class="nav-btn">
+            <form>
+                <button id="nav-big-btn" type="button">大按钮</button>
+            </form>
+            <script>
+                $("#nav-big-btn").click(function () {
+                    document.getElementById("nav-big-btn").innerText="点了一下";
+                    setTimeout(function() {
+                        document.getElementById("nav-big-btn").innerText="大按钮";
+                    },1000);
+                });
+            </script>
+        </div>
+<!-- 只有一个input时回车自动提交表单 -->
     </div>
     <br>
     <br>
