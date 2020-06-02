@@ -83,19 +83,45 @@
             </div>
         </div>
     </div>
-
     <div class="home-page">
         <div class="home-content clearfix">
-            <div class="left-box left">
-                zoom 1
+            <div class="left-box left clearfix">
+                <div class="box1">
+                    1
+                </div>
+                <div class="box2">
+                    2
+                </div>
             </div>
-            <div class="center-box left">
-                zoom 2
+            <div class="center-box left clearfix">
+                <div class="card" style="margin-top: 8px">
+                    1
+                </div>
+                <div class="card" style="margin-top: 8px">
+                    2
+                </div>
+                <div class="card" style="margin-top: 8px">
+                    3
+                </div>
             </div>
             <div class="right-box left">
-                zoom 3
+                <div>
+                    
+                </div>
             </div>
         </div>
+        <div class="back">
+            <div>
+                <button id="back" type="button">回到<br>顶部</button>
+            </div>
+            <script type="text/javascript">
+                $("#back").click(function () { 
+                    scrollTo(0,0);
+                });
+            </script>
+        </div>
+    </div>
+    <div >
     </div>
 </body>
 

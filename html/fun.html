@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fun</title>
+</head>
+<body>
+    <div style="position: relative;" >
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            .box {
+                display: none;
+                position: absolute;
+                width: 100px;
+                height: 100px;
+                border: 1px solid #000;
+
+                transform-origin:0 0;
+            }
+            .center {
+                margin-left: 50%;
+            }
+            .box_0 {
+                left: -100px;
+            }
+            .box_1 {
+                left: -90px;
+            }
+            .box_2 {
+                left: -80px;
+            }
+            .box_3 {
+                left: -70px;
+            }
+            .box_4 {
+                left: -60px;
+            }
+            .box:hover {
+                z-index: 1;
+                /* top: 90px; */
+                transition: .5s ease .0s;
+                transform: rotate(-180deg);
+            }
+            @keyframes first {
+                from {}
+                to {
+                    transform: rotate(-360deg);
+                    top: 0px;
+                }
+            }
+            .a {
+                position: relative;
+                height: 100px;
+                width: 100px;
+                margin: 100px auto;
+                border:1px solid black;
+                border-radius: 50%;
+                overflow: hidden;
+            }
+            .b {
+                position: absolute;
+                width: 180px;
+                height: 180px;
+                margin-left: 50%;
+                left: -90px;
+                top: 120px;
+                background-color: skyblue;
+                animation: first 10s linear;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+                transform-origin: 50% 50%;
+                border-radius: 40%;
+            }
+        </style>
+        <div class="a">
+            <div class="b"></div>
+        </div>
+        <div class="box box_0 center" style="background-color: red;"></div>
+        <div class="box box_1 center" style="background-color: orange;"></div>
+        <div class="box box_2 center" style="background-color: yellow;"></div>
+        <div class="box box_3 center" style="background-color: green;"></div>
+        <div class="box box_4 center" style="background-color: blue;"></div>
+    </div>
+</body>
+</html>
