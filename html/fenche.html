@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CH">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>旋转风车</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    body {
+        background-color: skyblue;
+    }
+    .back {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        margin: auto auto;
+        margin-top: 50%;
+        top: -100px;
+    }
+    .b,
+    .a {
+        width: 100px;
+        height: 100px;
+    }
+    .b {
+        position: absolute;
+        overflow: hidden;
+        animation: xuan 1s linear;
+        animation-iteration-count: infinite;
+    }
+    .a {
+        border-radius: 50%;
+        position: absolute;
+    }
+    .back .b1 {
+        left: 0;
+        top: 0;
+        transform-origin: 100px 100px;
+    }
+    .back .b2 {
+        right: 0;
+        top: 0;
+        transform-origin: 0px 100px;
+    }
+    .back .b3 {
+        left: 0;
+        bottom: 0;
+        transform-origin: 100px 0px;
+    }
+    .back .b4 {
+        right: 0;
+        bottom: 0;
+        transform-origin: 0px 0px;
+    }
+    .back .a1 {
+        top: 50px;
+        background-color: red;
+    }
+    .back .a2 {
+        left: -50px;
+        background-color: orange;
+    }
+    .back .a3 {
+        right: -50px;
+        background-color: green;
+    }
+    .back .a4 {
+        top: -50px;
+        background-color: yellow;
+    }
+    @keyframes xuan {
+        from {}
+        to {
+            transform: rotate(360deg);
+        }
+    }
+</style>
+<body>
+    <div class="back">
+        <div class="b b1" >
+            <div class="a a1"></div>
+        </div>
+        <div class="b b2" >
+            <div class="a a2"></div>
+        </div>
+        <div class="b b3" >
+            <div class="a a3"></div>
+        </div>
+        <div class="b b4" >
+            <div class="a a4"></div>
+        </div>
+    </div>
+</body>
+</html>
