@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CH">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>正方形</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    .back {
+        position: relative;
+        width: 100px;
+        height: 100px;
+        margin-left: 50%;
+        margin-top: 100px;
+        left: -50px;
+        transform: rotateY();
+    }
+    .face {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background-color: red;
+    }
+    .back .face1 {
+        transform: translate3d(0px,0px,0px);
+    }
+    .back .face2 {
+        transform: translate3d(0px,0px,100px);
+    }
+    .back .face3 {
+        transform: rotate3d(1,0,0,60deg);
+        z-index: 1;
+        background-color: green;
+    }
+    .back .face1 {
+        transform: translate3d(0px,0px,0px);
+    }
+    .back .face1 {
+        transform: translate3d(0px,0px,0px);
+    }
+    .back .face1 {
+        transform: translate3d(0px,0px,0px);
+    }
+    .back .face1 {
+        transform: translate3d(0px,0px,0px);
+    }
+</style>
+<body>
+    <div class="back">
+        <div class="face face1"></div>
+        <div class="face face2"></div>
+        <div class="face face3"></div>
+        <div class="face face4"></div>
+        <div class="face face5"></div>
+        <div class="face face6"></div>
+    </div>
+</body>
+</html>

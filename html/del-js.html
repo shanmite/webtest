@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <title>油猴测试</title>
+</head>
+<body>
+    <div id="doc">
+    </div>
+    <div>
+        <script>
+            var style_content ='* {margin: 0;padding: 0;}';
+                style_content+='.user-btn {position: fixed;left: 0;top: 75%;margin-left: 50px;}';
+                style_content+='.user-btn {width: 100px;height: 50px;border: 0;color: white;background-color: skyblue;cursor: pointer;outline: none;}';
+            var javascript ='$("#btn").click(function () {';
+                javascript+='alert("已成功去除");';
+                // javascript+='$("*").unbind();';
+                javascript+='console.log("text")';
+                javascript+='});';
+                //修改
+                var obj ='';
+                addElementDiv(obj);
+            function addElementDiv(obj) {
+                var parent = document.getElementById(obj);
+                //添加 元素
+                var button = document.createElement('button');
+                var style = document.createElement('style');
+                var script = document.createElement('script');
+                //设置 属性
+                button.setAttribute("id", "btn");
+                button.setAttribute("class", "user-btn");
+                //写入内容
+                button.innerHTML = "点击去除所有<br>JavaScript";
+                style.innerHTML =style_content;
+                script.innerHTML =javascript;
+                //配对子节点
+                parent.appendChild(button);
+                parent.appendChild(style);
+                parent.appendChild(script);
+            }
+        </script>
+    </div>
+</body>
+</html>
