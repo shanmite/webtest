@@ -48,7 +48,7 @@ ul {
     visibility: hidden;
 }
 body {
-    background-image: url(/images/index-bg.png);
+    background-image: url(../images/index-bg.png);
     background-attachment:fixed;
     background-size: 100vw 100vh;
     font-size: 16px;
