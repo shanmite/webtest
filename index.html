@@ -2,15 +2,14 @@
 <html lang="zh-CN" >
 <head>
     <meta charset="utf-8">
-    <link href="images/logo.ico" rel="icon" type="image/x-ico">
+    <link href="images/favicon.ico" rel="icon" type="image/x-ico">
     <link href="css/index.css" rel="stylesheet" type="text/css" >
+    <link href="css/demo.css" rel="stylesheet" type="text/css" >
     <meta name="viewport" content="width=device-width， initial-scale=1" />
     <script src="js/jQuery.js"></script>
 </head>
 <body>
     <title>^_-</title>
-    <h1 id="head" >(^)0(^)b</h1>
-    <a href="demo.html">测试用HTML</a>
     <!-- 图片与JavaScript初尝试 -->
     <p id="ok"><b>图片</b></p>
     <img id="pic" src="images/aquashion.jpg" alt="盐水贴贴" width="259" height="262" />
@@ -68,37 +67,17 @@
             }
         )
     </script>
-<!-- 列表 -->
-    <br>
-    <p>无序表</p>
-    <ul>
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
-        <li>4</li>
-        <li>5</li>
-    </ul>
-    <p>有序表</p>
-    <ol>
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
-        <li>4</li>
-        <li>5</li>
-    </ol>
-<!-- 表单 -->
-    <br>
-    是<input type="radio" name="单选" id="">不是<input type="radio" name="单选" id=""><br>
-    是<input type="checkbox" name="多选" id="">不是<input type="checkbox" name="多选" id="">
-<!--探索php  -->
-    <br>
-    <p><b>PHP</b></p>
-    <a href="QQ.html">QQ</a>
-<!-- 返回顶部 -->
-    <div>
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div class="home-page">
+        <div class="back">
+            <div>
+                <button id="back" type="button">回到<br>顶部</button>
+            </div>
+            <script type="text/javascript">
+                $("#back").click(function () {
+                    scrollTo(0, 0);
+                });
+            </script>
+        </div>
     </div>
-    <a href="#head"><button>返回顶部</button></a>
-
 </body>
 </html>

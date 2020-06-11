@@ -1,28 +1,53 @@
-body {
-    background-color: bisque;
+body,
+button,
+form,
+input,
+li,
+ol,
+p,
+td,
+textarea,
+ul {
+    margin: 0;
+    padding: 0;
 }
-h1 {
-    color: chocolate;
+img {
+    border: 0;
+    outline: 0;
 }
-p {
-    color: coral;
+li {
+    list-style: none;
 }
-#post {
-    color: forestgreen;
+a {
+    color: #000;
+    outline: none;
+    text-decoration: none;
 }
-.table {
-    cursor: pointer;
-    width: 2em;
+button {
+    outline: none;
 }
-/* .table:link {
-    
+em {
+    font-style: normal;
 }
-.table:visited {
-
-} */
-.table:hover {
-    color: royalblue;
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
-.table:active {
-    color: blue;
+.clearfix {
+    *zoom:1;
+}
+.clearfix:before {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
 }
