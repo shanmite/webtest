@@ -12,128 +12,40 @@
 
 <body>
     <div class="home-page">
+        <script type="text/javascript">
+            window.onload = function () {
+                document.onmousemove = function (e) {
+                    var p = getMousePos(e)
+                    var style = `
+                        position: fixed;
+                        height:100px;
+                        width:100px;
+                        background-color:rgb(0,0,0,0.5);
+                        transform: translate(-50%,-50%);`
+                        style+= "margin-left:"+p["x"]+"px;"
+                        style+= "margin-top:"+p["y"]+"px;"
+                    setStyleById("scroll", style);
+                    function setStyleById(id, style) {
+                        document.getElementById(id).setAttribute("style", style)
+                        var a = document.getElementById(id).getAttribute("style")
+                    }
+                }
+            }
+            function getMousePos(event) {
+                var e = event || window.event;
+                return { 'x': e.clientX, 'y': e.clientY }
+            }
+            function view(params) {
+                console.log("数据类型:" + typeof params, "输出:" + params)
+            }
+        </script>
         <div class="back">
             <div>
                 <button id="back" type="button">回到<br>顶部</button>
-                <script>
-                    $("#back").hide();
-                    $(window).scroll(function () {   //页面加载时，获取滚动条高度
-                        var distance = $(document).scrollTop();  //获取滚动条高度
-                        if (distance <= 300) {
-                            $("#back").hide(500);
-                        }
-                        else {
-                            $("#back").show(500);
-                        }
-                    })
-                    $("#back").click(function () {
-                        scrollTo(0, 0);
-                    })
-                </script>
             </div>
         </div>
     </div>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+    <div id="scroll"></div>
 </body>
 
 </html>
