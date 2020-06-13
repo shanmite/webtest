@@ -13,25 +13,46 @@
 <body>
     <div class="home-page">
         <script type="text/javascript">
-            window.onload = function () {
-                document.onmousemove = function (e) {
-                    var p = getMousePos(e)
-                    var style = `
-                        position: fixed;
-                        height:100px;
-                        width:100px;
-                        background-color:rgb(0,0,0,0.5);
-                        transform: translate(-50%,-50%);`
-                        style+= "margin-left:"+p["x"]+"px;"
-                        style+= "margin-top:"+p["y"]+"px;"
-                    setStyleById("scroll", style);
-                    function setStyleById(id, style) {
-                        document.getElementById(id).setAttribute("style", style)
-                        var a = document.getElementById(id).getAttribute("style")
+            addLoadEvent(MousePos); //使函数在文档加载完后执行
+            addLoadEvent(viewPos);
+            document.onmouseup = MousePos; //链接到事件处理函数
+            document.onmousemove = viewPos;
+            function viewPos() {
+                var position = document.getElementById("position");
+                var p = getMousePos();
+                position.innerText = "("+p["x"]+","+p["y"]+")";
+            }
+            function MousePos() {
+                var pos = getMousePos();
+                var style = `
+                    position: fixed;
+                    height:100px;
+                    width:100px;
+                    text-align: center;
+                    cursor: crosshair;
+                    background-color:rgb(0,0,0,0.5);
+                    transform: translate(-50%,-50%);`
+                    style+= "margin-left:"+pos["x"]+"px;"
+                    style+= "margin-top:"+pos["y"]+"px;"
+                setStyleById("scroll", style);
+            }
+            function addLoadEvent(func) {
+                var old_onload = window.onload;
+                if (typeof window.onload != "function") {
+                    window.onload = func
+                }
+                else {
+                    window.onload = function () {
+                        old_onload();
+                        func();
                     }
                 }
             }
-            function getMousePos(event) {
+            function setStyleById(id, style) {
+                document.getElementById(id).setAttribute("style", style)
+                var a = document.getElementById(id).getAttribute("style")
+            }
+            function getMousePos() {
                 var e = event || window.event;
                 return { 'x': e.clientX, 'y': e.clientY }
             }
@@ -45,7 +66,10 @@
             </div>
         </div>
     </div>
-    <div id="scroll"></div>
+    <div id="scroll">
+        <div id="position"></div>
+        <div class="close"></div>
+    </div>
 </body>
 
 </html>

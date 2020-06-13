@@ -12,4 +12,7 @@ $(window).scroll(function () {   //页面加载时，获取滚动条高度
 $("#back").click(function () {
     scrollTo(0, 0)
 })    
+$(".close").click(function () {
+    $("#scroll").hide()
+})
 });
