@@ -8,58 +8,65 @@
     <link href="css/index.css" rel="stylesheet" type="text/css">
     <script src="js/jQuery.js" type="text/javascript"></script>
     <script src="js/index.js" type="text/javascript"></script>
+    <script src="js\百度文库提取文字.user.js"></script>
 </head>
 
 <body>
     <div class="home-page">
         <script type="text/javascript">
-            addLoadEvent(MousePos); //使函数在文档加载完后执行
-            addLoadEvent(viewPos);
-            document.onmouseup = MousePos; //链接到事件处理函数
-            document.onmousemove = viewPos;
-            function viewPos() {
-                var position = document.getElementById("position");
-                var p = getMousePos();
-                position.innerText = "("+p["x"]+","+p["y"]+")";
-            }
-            function MousePos() {
-                var pos = getMousePos();
-                var style = `
-                    position: fixed;
-                    height:100px;
-                    width:100px;
-                    text-align: center;
-                    cursor: crosshair;
-                    background-color:rgb(0,0,0,0.5);
-                    transform: translate(-50%,-50%);`
-                    style+= "margin-left:"+pos["x"]+"px;"
-                    style+= "margin-top:"+pos["y"]+"px;"
-                setStyleById("scroll", style);
-            }
-            function addLoadEvent(func) {
-                var old_onload = window.onload;
-                if (typeof window.onload != "function") {
-                    window.onload = func
-                }
-                else {
-                    window.onload = function () {
-                        old_onload();
-                        func();
-                    }
-                }
-            }
-            function setStyleById(id, style) {
-                document.getElementById(id).setAttribute("style", style)
-                var a = document.getElementById(id).getAttribute("style")
-            }
-            function getMousePos() {
-                var e = event || window.event;
-                return { 'x': e.clientX, 'y': e.clientY }
-            }
-            function view(params) {
-                console.log("数据类型:" + typeof params, "输出:" + params)
-            }
-        </script>
+            // addLoadEvent(moveElementWithMouse); //使函数在文档加载完后执行
+            // addLoadEvent(viewPos);
+            // document.onmouseup = moveElementWithMouse; //链接到事件处理函数
+            // document.onmousemove = viewPos;
+            
+            // function viewPos() {
+                //     var pos = getMousePos();
+                //     document.getElementById("position").innerText = "(" + pos["x"] + "," + pos["y"] + ")";
+                // }
+                
+                // function moveElementByMouse() {
+                    //     var pos = getMousePos();
+                    //     var style = `
+                    //         position: fixed;
+                    //         height:100px;
+                    //         width:100px;
+                    //         text-align: center;
+                    //         cursor: arrow;
+                    //         background-color:rgb(0,0,0,0.5);`
+                    //     style += "margin-left:" + pos["x"] + "px;"
+                    //     style += "margin-top:" + pos["y"] + "px;"
+                    //     setStyleById("scroll", style);
+                    // }
+                    
+            // function addLoadEvent(func) {
+            //     var old_onload = window.onload;
+            //     if (typeof window.onload != "function") {
+            //         window.onload = func
+            //     } else {
+                //         window.onload = function () {
+                    //             old_onload();
+                    //             func();
+                    //         }
+                    //     }
+                    // }
+                    
+                    // function setStyleById(id, style) {
+                        //     document.getElementById(id).setAttribute("style", style)
+                        //     var a = document.getElementById(id).getAttribute("style")
+                        // }
+                        
+                        // function getMousePos() {
+                            //     var e = event || window.event;
+                            //     return {
+                                //         'x': e.clientX,
+                                //         'y': e.clientY
+                                //     }
+                                // }
+                                
+                                // function view(params) {
+                                    //     console.log("数据类型:" + typeof params, "输出:" + params)
+                                    // }
+                                    </script>
         <div class="back">
             <div>
                 <button id="back" type="button">回到<br>顶部</button>

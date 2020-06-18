@@ -9,8 +9,6 @@ function ajax()
         },
         success: function (msg) {  //请求成功后的回调函数
         document.getElementById("post").innerHTML=msg;
-        // $("#post").append(msg);
-            //"jQuery"输入在所选元素之后
         }
     });
     
