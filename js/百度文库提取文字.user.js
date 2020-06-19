@@ -2,7 +2,7 @@
 // @name         百度文库提取文字
 // @namespace    http://tampermonkey.net/
 // @version      1.5.4
-// @description  try to take over the world!
+// @description  提取非pdf格式的内容到一个浮动窗口方便复制
 // @author       shanmite
 // @match        https://wenku.baidu.com/view/*
 // @grant        none
@@ -12,16 +12,16 @@
     'use strict';
     window.onload = function () {
         //生成一个区域
-        var div_1_style = "z-index: 999;position: fixed;top: 20%;right: 0;border: 1px solid #000;border-radius: 10px;overflow: hidden;;width: 600px;height: 400px;box-shadow: rgb(0, 0, 0) 0px 0px 6px;background-color: white;"
+        var div_1_style = "z-index: 9999999;position: fixed;top: 20%;right: 0;border: 1px solid #000;border-radius: 10px;overflow: hidden;;width: 600px;height: 400px;box-shadow: rgb(0, 0, 0) 0px 0px 6px;background-color: white;"
         var div_1 = addElement("div", "1", div_1_style);
         document.body.appendChild(div_1);
         //在区域内放一个拖动区
-        var div_2_style = "z-index: 999;position: absolute;width: 100%;height: 40px;text-align: center;line-height: 40px;background-color: grey;top: 0;cursor:move"
+        var div_2_style = "width: 100%;height: 35px;text-align: center;line-height: 35px;font-size: 20px;background-color: grey;top: 0;cursor:move"
         var div_2 = addElement("div", "", div_2_style);
         div_2.innerText = "提取文字";
         div_1.appendChild(div_2);
         //生成文本域
-        var textarea_style = "position:absolute ;width: 100%;height: 360px;background-color: white;bottom: 0;border: 0;resize:none"
+        var textarea_style = "width: 100%;height: 332px;background-color: white;border: 0;resize:none"
         var textarea = addElement("textarea", "", textarea_style);
         div_1.appendChild(textarea);
         //绑定点下事件
@@ -44,7 +44,7 @@
             }
         }
         //底部栏
-        var div_3_style = "position:absolute ;bottom: 0;";
+        var div_3_style = "width: 100%;";
         var div_3 = addElement("div", "", div_3_style);
         div_1.appendChild(div_3);
 
@@ -60,7 +60,8 @@
                 var t = con[i].innerText;
                 text = text + t;
             }
-            textarea.innerText = text;
+            text = text.replace(/\s+/g,'\r\n');
+            textarea.value = text;
         }
         //放大字的按钮
         var fontsize = 14;
