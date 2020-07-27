@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         百度文库提取文字
 // @namespace    http://tampermonkey.net/
-// @version      1.5.4
+// @version      1.5.5
 // @description  提取非pdf格式的内容到一个浮动窗口方便复制
 // @author       shanmite
 // @match        https://wenku.baidu.com/view/*
@@ -56,9 +56,14 @@
         button_1.onclick = function () {
             var con = document.getElementsByClassName("reader-word-layer")
             var text = "";
-            for (var i = 0; i < con.length; i++) {
-                var t = con[i].innerText;
-                text = text + t;
+            if (con.length == 0) {
+                text = "无法提取pdf内的内容"
+            }
+            else {
+                for (var i = 0; i < con.length; i++) {
+                    var t = con[i].innerText;
+                    text = text + t;
+                }
             }
             text = text.replace(/\s+/g,'\r\n');
             textarea.value = text;
