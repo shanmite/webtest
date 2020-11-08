@@ -161,11 +161,15 @@ a {
 }
 .center-box .card {
     background-color: skyblue;
+    margin-top: 8px;
     height: 600px;
 }
 .right-box {
     width: 268px;
+}
+.right-box div{
     background-color: skyblue;
+    margin-top: 8px;
 }
 .home-page .back div {
     position: fixed;

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>事件冒泡</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .a {
+            width: 150px;
+            height: 150px;
+            background-color: #000;
+        }
+        .b {
+            width: 100px;
+            height: 100px;
+            background-color: #fff;
+        }
+        .c {
+            width: 50px;
+            height: 50px;
+            background-color: #000;
+        }
+    </style>
+</head>
+<body>
+    <div class="a">
+        <div class="b">
+            <div class="c">
+            </div>
+        </div>
+    </div>
+    <script>
+        const body = document.querySelector('body');
+        body.addEventListener('click',(e)=>{
+        	// console.log(e.target);
+        	switch(e.target.classList.value) {
+        		case 'a':
+        			console.log('a');
+        			break;
+        		case 'b':
+        			console.log('b');
+        			break;
+        		case 'c':
+        			console.log('c');
+        			break;
+        	}
+            
+        },false)
+    </script>
+</body>
+</html>
